@@ -71,7 +71,7 @@ const LogIn = () => {
               . Explore our website and grab your favorite one.
             </p>
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-purple-600">
+          <div className="card shrink-0 w-full max-w-sm shadow-2xl ">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">

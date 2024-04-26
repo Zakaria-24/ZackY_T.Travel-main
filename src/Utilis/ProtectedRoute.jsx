@@ -5,7 +5,6 @@ import CustomContex from "./CustomContex";
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = CustomContex();
   const location = useLocation();
-  console.log(user);
 
   if (loading) {
     return (

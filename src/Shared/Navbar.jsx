@@ -3,7 +3,6 @@ import CustomContex from "../Utilis/CustomContex";
 
 const Navbar = () => {
   const { user, logOut } = CustomContex();
-  console.log(user);
   return (
     <div>
       <div className="navbar p-4">
