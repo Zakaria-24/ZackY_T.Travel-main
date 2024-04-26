@@ -7,6 +7,7 @@ import MyList from "../Pages/MyList";
 import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import Root from "../Layout/Root";
+import ProtectedRoute from "../Utilis/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -24,11 +25,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/addTouristsSpot",
-        element: <AddTouristsSpot />,
+        element: (
+          <ProtectedRoute>
+            <AddTouristsSpot />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "myList",
-        element: <MyList />,
+        element: (
+          <ProtectedRoute>
+            <MyList />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "login",

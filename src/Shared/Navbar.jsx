@@ -32,20 +32,20 @@ const Navbar = () => {
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              {/* <li className=" bg-teal-600 rounded-2xl text-white">
+              <li className=" bg-teal-600 rounded-2xl text-white">
                 <NavLink to="/allTouristsSpot">All Tourists Spot</NavLink>
               </li>
 
               {user && (
-                 <>
-                 <li className=" bg-teal-600 rounded-2xl mr-2 text-white">
-                   <NavLink to="/addTouristsSpot">Add Tourists Spot</NavLink>
-                 </li>
-                 <li className=" bg-teal-600 rounded-2xl mr-2 text-white">
-                   <NavLink to="/myList">My List</NavLink>
-                 </li>
-               </>
-              )} */}
+                <>
+                  <li className=" bg-teal-600 rounded-2xl mr-2 text-white">
+                    <NavLink to="/addTouristsSpot">Add Tourists Spot</NavLink>
+                  </li>
+                  <li className=" bg-teal-600 rounded-2xl mr-2 text-white">
+                    <NavLink to="/myList">My List</NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           <div className="tooltip tooltip-right" data-tip="Zacky_T.Travel">
@@ -65,9 +65,9 @@ const Navbar = () => {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
-            {/* <li className=" bg-teal-600 rounded-2xl text-white">
-                <NavLink to="/allTouristsSpot">All Tourists Spot</NavLink>
-              </li>
+            <li className=" bg-teal-600 rounded-2xl text-white">
+              <NavLink to="/allTouristsSpot">All Tourists Spot</NavLink>
+            </li>
 
             {user && (
               <>
@@ -78,11 +78,11 @@ const Navbar = () => {
                   <NavLink to="/myList">My List</NavLink>
                 </li>
               </>
-            )} */}
+            )}
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login">
+          {/* <Link to="/login">
             <button className="btn hover:bg-base-300 bg-purple-500 rounded-2xl">
               Login
             </button>
@@ -91,8 +91,8 @@ const Navbar = () => {
             <button className="btn hover:bg-base-300 bg-purple-500 rounded-2xl">
               Register
             </button>
-          </Link>
-          {/* {user ? (
+          </Link> */}
+          {user ? (
             <>
               <div
                 className="tooltip tooltip-left w-10 rounded-full"
@@ -104,13 +104,13 @@ const Navbar = () => {
                   src={user?.photoURL || "https://i.ibb.co/3vTKL1Y/Logo2.png"}
                 />
               </div>
-              <Link
+              {/* <Link
                 to="/login"
                 className=" btn hover:bg-teal-200 bg-teal-400 px-4 rounded-2xl ml-2"
                 onClick={() => logOut()}
               >
                 LogOut
-              </Link>
+              </Link> */}
             </>
           ) : (
             <>
@@ -125,7 +125,7 @@ const Navbar = () => {
                 </button>
               </Link>
             </>
-          )} */}
+          )}
         </div>
       </div>
     </div>

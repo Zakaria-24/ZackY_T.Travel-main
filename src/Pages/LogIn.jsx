@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
+import CustomContex from "../Utilis/CustomContex";
 const LogIn = () => {
-  const { loginUser, setUser } = useContext(AuthContext);
+  const { loginUser, setUser } = CustomContex();
   const [toggle, setToggle] = useState(false);
   const [loginError, setLoginError] = useState();
   const [success, setSuccess] = useState("");
