@@ -23,6 +23,7 @@ const Footer = () => {
         </nav>
         <nav>
           <nav className="md:place-self-center md:justify-self-end">
+            <h6 className="footer-title">Social Site</h6>
             <div className="grid grid-flow-col gap-4">
               <a>
                 <svg

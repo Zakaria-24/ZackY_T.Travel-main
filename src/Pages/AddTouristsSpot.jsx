@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import CustomContex from "../Utilis/CustomContex";
+import toast from "react-hot-toast";
 
 const AddTouristsSpot = () => {
   const { user } = CustomContex();
@@ -11,8 +12,50 @@ const AddTouristsSpot = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
-    // const {spotName, } = data;
+    // console.log(data);
+    const {
+      cost,
+      country,
+      description,
+      email,
+      location,
+      name,
+      photoUrl,
+      seasonality,
+      spotName,
+      time,
+      visit,
+    } = data;
+
+    const newTouristSpot = {
+      cost,
+      country,
+      description,
+      email,
+      location,
+      name,
+      photoUrl,
+      seasonality,
+      spotName,
+      time,
+      visit,
+    };
+    console.log(newTouristSpot);
+    // send data to the server
+    fetch("http://localhost:5000/spot", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newTouristSpot),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          toast("Added successfully");
+        }
+      });
   };
   return (
     <div className=" p-24">
@@ -185,37 +228,6 @@ const AddTouristsSpot = () => {
             </label>
           </div>
         </div>
-        {/* form name and quantity row */}
-        {/* <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
-            <label className="label">
-              <span className="label-text">User_Email</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="text"
-                name="email"
-                defaultValue={user?.email}
-                // placeholder="Tourist_Spot_Name"
-                className="input input-bordered w-full"
-              />
-            </label>
-          </div>
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">User_Name</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="text"
-                name="displayName"
-                defaultValue={user?.displayName}
-                // placeholder="Tourist_Spot_Name"
-                className="input input-bordered w-full"
-              />
-            </label>
-          </div>
-        </div> */}
         {/* form Photo url row */}
         <div className="mb-8">
           <div className="form-control w-full">
