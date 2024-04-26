@@ -52,8 +52,6 @@ const Navbar = () => {
               <img
                 className="w-28 h-12 rounded-md"
                 src="https://i.ibb.co/3vTKL1Y/Logo2.png"
-                // https://i.ibb.co/mDyk53S/Logo.png
-
                 alt="image"
               />
             </Link>
