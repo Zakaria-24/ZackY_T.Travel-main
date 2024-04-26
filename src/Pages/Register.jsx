@@ -19,7 +19,7 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const { fullName, photoUrl, email, password } = data;
+    const { fullName, image, email, password } = data;
 
     if (password.length < 6) {
       setRegError("Password must be at least 6 characters");
@@ -49,7 +49,7 @@ const Register = () => {
         // update user
         updateProfile(result.user, {
           displayName: fullName,
-          photoURL: photoUrl,
+          photoURL: image,
         }).then(() => {
           // navigate after login user
           navigate("/");
@@ -90,7 +90,7 @@ const Register = () => {
                   <span className="label-text">PhotoUrl</span>
                 </label>
                 <input
-                  name="photoUrl"
+                  name="image"
                   type=" text"
                   placeholder="photoUrl"
                   className="input input-bordered"
