@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
 import CustomContex from "../Utilis/CustomContex";
 const LogIn = () => {
-  const { loginUser, setUser, googleLogin } = CustomContex();
+  const { loginUser, setUser, googleLogin, githubLogin } = CustomContex();
   const [toggle, setToggle] = useState(false);
   const [loginError, setLoginError] = useState();
   const [success, setSuccess] = useState("");
@@ -43,7 +43,16 @@ const LogIn = () => {
   const handleGoogleLogin = () => {
     googleLogin().then((result) => {
       setUser(result.user);
-      toast.success("Login Successfully");
+      toast.success("Google Login Successfully");
+      navigate("/");
+    });
+  };
+
+  // github login
+  const handleGithubLogin = () => {
+    githubLogin().then((result) => {
+      setUser(result.user);
+      toast.success("GitHub Login Successfully");
       navigate("/");
     });
   };
@@ -107,11 +116,18 @@ const LogIn = () => {
               </div>
             </form>
 
-            <img
-              onClick={handleGoogleLogin}
-              src="https://i.ibb.co/dbtgWYG/icons8-google-48.png"
-              alt=""
-            />
+            <div className=" flex justify-center items-center divider">
+              <img
+                onClick={handleGoogleLogin}
+                src="https://i.ibb.co/dbtgWYG/icons8-google-48.png"
+                alt=""
+              />
+              <img
+                onClick={handleGithubLogin}
+                src="https://i.ibb.co/TYx5kzV/icons8-github-50.png"
+                alt=""
+              />
+            </div>
 
             <p className="ml-4">
               Do not have an account{" "}
