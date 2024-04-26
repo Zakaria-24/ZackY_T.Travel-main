@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import CustomContex from "../Utilis/CustomContex";
 
 const Navbar = () => {
-  const { user } = CustomContex();
+  const { user, logOut } = CustomContex();
   console.log(user);
   return (
     <div>
@@ -82,16 +82,6 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          {/* <Link to="/login">
-            <button className="btn hover:bg-base-300 bg-purple-500 rounded-2xl">
-              Login
-            </button>
-          </Link>
-          <Link to="/register">
-            <button className="btn hover:bg-base-300 bg-purple-500 rounded-2xl">
-              Register
-            </button>
-          </Link> */}
           {user ? (
             <>
               <div
@@ -104,13 +94,13 @@ const Navbar = () => {
                   src={user?.photoURL || "https://i.ibb.co/3vTKL1Y/Logo2.png"}
                 />
               </div>
-              {/* <Link
+              <Link
                 to="/login"
                 className=" btn hover:bg-teal-200 bg-teal-400 px-4 rounded-2xl ml-2"
                 onClick={() => logOut()}
               >
                 LogOut
-              </Link> */}
+              </Link>
             </>
           ) : (
             <>
