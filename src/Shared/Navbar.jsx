@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
+import CustomContex from "../Utilis/CustomContex";
 
 const Navbar = () => {
+  const { user, logOut } = CustomContex();
+  console.log(user);
   return (
     <div>
       <div className="navbar p-4">
@@ -79,7 +82,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button>End</button>
+          <Link to="/register">
+            <button className="btn hover:bg-teal-300 bg-teal-500 rounded-2xl">
+              Register
+            </button>
+          </Link>
           {/* {user ? (
             <>
               <div
@@ -89,9 +96,7 @@ const Navbar = () => {
                 <img
                   className=" rounded-full h-10 w-10"
                   alt="image"
-                  src={
-                    user?.photoURL || "https://i.ibb.co/h8QtYNY/preview-xl.jpg"
-                  }
+                  src={user?.photoURL || "https://i.ibb.co/3vTKL1Y/Logo2.png"}
                 />
               </div>
               <Link
@@ -99,22 +104,22 @@ const Navbar = () => {
                 className=" btn hover:bg-teal-200 bg-teal-400 px-4 rounded-2xl ml-2"
                 onClick={() => logOut()}
               >
-                Log Out
+                LogOut
               </Link>
             </>
           ) : (
-            <div>
-            <Link to="/login">
-              <button className="btn hover:bg-teal-300 bg-teal-500 rounded-2xl">
-                Log In
-              </button>
-            </Link>
-            <Link to="/register">
-              <button className="btn hover:bg-teal-300 bg-teal-500 rounded-2xl">
-                Register
-              </button>
-            </Link>
-            </div>
+            <>
+              <Link to="/login">
+                <button className="btn hover:bg-teal-300 bg-teal-500 rounded-2xl">
+                  Login
+                </button>
+              </Link>
+              <Link to="/register">
+                <button className="btn hover:bg-teal-300 bg-teal-500 rounded-2xl">
+                  Register
+                </button>
+              </Link>
+            </>
           )} */}
         </div>
       </div>

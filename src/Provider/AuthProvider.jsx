@@ -15,6 +15,7 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   // social provider
   const googlrProvider = new GoogleAuthProvider();
@@ -22,23 +23,28 @@ const AuthProvider = ({ children }) => {
 
   // console.log(user);
   const registerUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const loginUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   // google Login
   const googleLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, googlrProvider);
   };
   // github Login
   const githubLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
 
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
@@ -50,6 +56,7 @@ const AuthProvider = ({ children }) => {
     googleLogin,
     githubLogin,
     logOut,
+    loading,
   };
 
   useEffect(() => {
@@ -59,6 +66,7 @@ const AuthProvider = ({ children }) => {
       } else {
         setUser(null);
       }
+      setLoading(false);
     });
     return () => {
       unSubscribe();
