@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
 import CustomContex from "../Utilis/CustomContex";
 const LogIn = () => {
-  const { loginUser, setUser } = CustomContex();
+  const { loginUser, setUser, googleLogin } = CustomContex();
   const [toggle, setToggle] = useState(false);
   const [loginError, setLoginError] = useState();
   const [success, setSuccess] = useState("");
@@ -37,6 +37,15 @@ const LogIn = () => {
         console.log(error);
         setLoginError("Provide a valid email or password");
       });
+  };
+
+  // google login
+  const handleGoogleLogin = () => {
+    googleLogin().then((result) => {
+      setUser(result.user);
+      toast.success("Login Successfully");
+      navigate("/");
+    });
   };
 
   return (
@@ -97,6 +106,13 @@ const LogIn = () => {
                 </button>
               </div>
             </form>
+
+            <img
+              onClick={handleGoogleLogin}
+              src="https://i.ibb.co/dbtgWYG/icons8-google-48.png"
+              alt=""
+            />
+
             <p className="ml-4">
               Do not have an account{" "}
               <Link className="underline" to="/register">
