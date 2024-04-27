@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 const AddTouristsSpot = () => {
   const { user } = CustomContex();
-  // console.log(user);
+  console.log(user);
   const {
     register,
     handleSubmit,
@@ -12,7 +12,7 @@ const AddTouristsSpot = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    // console.log(data);
+    console.log(data);
     const {
       cost,
       country,
@@ -26,7 +26,6 @@ const AddTouristsSpot = () => {
       time,
       visit,
     } = data;
-
     const newTouristSpot = {
       cost,
       country,
@@ -53,7 +52,7 @@ const AddTouristsSpot = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          toast("Added successfully");
+          toast.success("Added successfully");
         }
       });
   };
