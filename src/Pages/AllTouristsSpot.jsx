@@ -8,11 +8,10 @@ const AllTouristsSpot = () => {
   console.log(setSpots);
   return (
     <div className=" my-10">
-      <h1>All Tourists Spot: {spots.length}</h1>
       <div className="container mx-auto">
         <div className="dropdown dropdown-bottom">
           <div tabIndex={0} role="button" className="btn btn-outline m-1">
-            Search...
+            Sort...
           </div>
           <ul
             tabIndex={0}

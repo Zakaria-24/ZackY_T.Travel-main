@@ -21,10 +21,8 @@ const SpotCrad = ({ spot }) => {
             <div className="badge badge-outline">{visit}</div>
           </div>
         </div>
-        <Link
-        //  to="viewDetails"
-        >
-          <button className="btn btn-outline w-full">View Details</button>
+        <Link to="/viewDetails" className="btn btn-outline w-full">
+          View Details
         </Link>
       </div>
     </div>

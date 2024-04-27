@@ -8,7 +8,7 @@ import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import Root from "../Layout/Root";
 import ProtectedRoute from "../Utilis/ProtectedRoute";
-// import ViewDetails from "../Components/ViewDetails";
+import ViewDetails from "../Components/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -49,10 +49,10 @@ const router = createBrowserRouter([
         path: "register",
         element: <Register />,
       },
-      // {
-      //   path: "viewDetails",
-      //   element: <ViewDetails />,
-      // },
+      {
+        path: "/viewDetails",
+        element: <ViewDetails />,
+      },
     ],
   },
 ]);
