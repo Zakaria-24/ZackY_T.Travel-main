@@ -1,8 +1,17 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 const SpotCrad = ({ spot }) => {
-  const { cost, description, photoUrl, seasonality, spotName, time, visit } =
-    spot;
+  const {
+    cost,
+    description,
+    photoUrl,
+    seasonality,
+    spotName,
+    time,
+    visit,
+    _id,
+  } = spot;
+  console.log(_id);
   return (
     <div>
       <div className="card bg-base-100 shadow-xl space-y-2">
@@ -21,7 +30,7 @@ const SpotCrad = ({ spot }) => {
             <div className="badge badge-outline">{visit}</div>
           </div>
         </div>
-        <Link to="/viewDetails" className="btn btn-outline w-full">
+        <Link to={`/viewDetails/${_id}`} className="btn btn-outline w-full">
           View Details
         </Link>
       </div>

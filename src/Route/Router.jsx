@@ -8,7 +8,9 @@ import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import Root from "../Layout/Root";
 import ProtectedRoute from "../Utilis/ProtectedRoute";
-import ViewDetails from "../Components/ViewDetails";
+import SpotViewDetails from "../Pages/SpotViewDetails";
+import Update from "../Pages/Update";
+import Delete from "../Pages/Delete";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +36,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "myList",
+        path: "/myList",
         element: (
           <ProtectedRoute>
             <MyList />
@@ -50,8 +52,26 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "/viewDetails",
-        element: <ViewDetails />,
+        path: "/update",
+        element: (
+          <ProtectedRoute>
+            <Update />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "delete",
+        element: <Delete />,
+      },
+      {
+        path: "/viewDetails/:id",
+        element: (
+          <ProtectedRoute>
+            <SpotViewDetails />
+          </ProtectedRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://southeast-asia-server.vercel.app/spot/${params.id}`),
       },
     ],
   },
