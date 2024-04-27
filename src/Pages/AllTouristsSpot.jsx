@@ -24,7 +24,7 @@ const AllTouristsSpot = () => {
           </ul>
         </div>
       </div>
-      <div className=" container mx-auto grid grid-cols-3 ">
+      <div className=" container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
         {spots.map((spot) => (
           <SpotCrad key={spot._id} spot={spot}></SpotCrad>
         ))}

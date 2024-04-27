@@ -8,6 +8,7 @@ import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import Root from "../Layout/Root";
 import ProtectedRoute from "../Utilis/ProtectedRoute";
+// import ViewDetails from "../Components/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/allTouristsSpot",
         element: <AllTouristsSpot />,
-        loader: () => fetch("http://localhost:5000/spot"),
+        loader: () => fetch("https://southeast-asia-server.vercel.app/spot"),
       },
       {
         path: "/addTouristsSpot",
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         path: "register",
         element: <Register />,
       },
+      // {
+      //   path: "viewDetails",
+      //   element: <ViewDetails />,
+      // },
     ],
   },
 ]);
