@@ -4,7 +4,6 @@ import toast from "react-hot-toast";
 
 const AddTouristsSpot = () => {
   const { user } = CustomContex();
-  console.log(user);
   const {
     register,
     handleSubmit,
@@ -12,7 +11,6 @@ const AddTouristsSpot = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     const {
       cost,
       country,
@@ -39,7 +37,6 @@ const AddTouristsSpot = () => {
       time,
       visit,
     };
-    console.log(newTouristSpot);
     // send data to the server
     fetch("https://southeast-asia-server.vercel.app/spot", {
       method: "POST",

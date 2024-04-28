@@ -1,21 +1,73 @@
-import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const SpotViewDetails = () => {
-  // const loadedSpot = useLoaderData();
-  // const { id } = useParams();
-  // console.log(id);
+  const navigate = useNavigate();
+  const loadedSpot = useLoaderData();
+  console.log(loadedSpot);
+  // cost,
 
-  // const [spotDetails, setSpotDetails] = useState();
-  // console.log(spotDetails);
+  //     location,
 
-  // useEffect(() => {
-  //   const viewSpot = loadedSpot.find((s) => s.id == id);
-  //   setSpotDetails(viewSpot);
-  // }, [id, loadedSpot]);
+  //     seasonality,
+
+  //     time,
+  //     visit,
+
   return (
-    <div>
-      <h1>ViewDetails</h1>
+    <div className=" container mx-auto my-10">
+      <div className="card card-side bg-base-100 shadow-xl ">
+        <figure>
+          <img src={loadedSpot?.photoUrl} className=" h-full" alt="image" />
+        </figure>
+        <div className="card-body bg-slate-200">
+          <h1 className="card-title text-2xl font-bold flex justify-center mt-0 border-green-400 border-2">
+            {loadedSpot?.country}
+          </h1>
+          <h1 className="card-title">{loadedSpot?.spotName}!</h1>
+          <h2 className=" text-xl font-medium underline">Description:</h2>
+          <p>{loadedSpot?.description}</p>
+
+          <div className="card-actions justify-end mt-4">
+            <div className="badge badge-outline">{loadedSpot?.time}</div>
+            <div className="badge badge-outline">{loadedSpot?.cost}</div>
+          </div>
+          <div className="card-actions justify-end mt-4">
+            <div className="badge badge-outline">{loadedSpot?.seasonality}</div>
+            <div className="badge badge-outline">{loadedSpot?.visit}</div>
+          </div>
+          <div className="card-actions justify-end mt-4">
+            <div className="badge badge-outline">
+              <FaLocationDot />
+              {loadedSpot?.location}
+            </div>
+          </div>
+
+          <div className="card-actions justify-end">
+            <button
+              onClick={() => navigate(-1 || "/")}
+              className="flex items-center justify-center w-1/2 px-5 py-1 text-lg transition-colors duration-200 bg-black text-white border rounded-lg gap-x-2 sm:w-auto   hover:bg-gray-100 "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-5 h-5 rtl:rotate-180 text-primary"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+                />
+              </svg>
+
+              <span className=" p-4">Back to Previous Page</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

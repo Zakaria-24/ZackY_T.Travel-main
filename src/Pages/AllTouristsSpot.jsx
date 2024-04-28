@@ -4,6 +4,7 @@ import SpotCrad from "../Components/SpotCrad";
 
 const AllTouristsSpot = () => {
   const allSpots = useLoaderData();
+  console.log(allSpots);
   const [spots, setSpots] = useState(allSpots);
   console.log(setSpots);
   return (
