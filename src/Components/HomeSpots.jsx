@@ -11,13 +11,12 @@ const HomeSpots = () => {
 
   return (
     <div>
-      <h1>
-        Home Spots:
-        {spots.length}
+      <h1 className=" flex justify-center my-6 text-3xl font-bold">
+        Tourist Spots
       </h1>
       {/* <h1>Location: {spots?.location}</h1> */}
 
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {spots.map((sp) => {
           return <HomeCard key={sp._id} sp={sp}></HomeCard>;
         })}
