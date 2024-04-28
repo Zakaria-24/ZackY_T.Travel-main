@@ -4,15 +4,6 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 const SpotViewDetails = () => {
   const navigate = useNavigate();
   const loadedSpot = useLoaderData();
-  console.log(loadedSpot);
-  // cost,
-
-  //     location,
-
-  //     seasonality,
-
-  //     time,
-  //     visit,
 
   return (
     <div className=" container mx-auto my-10">

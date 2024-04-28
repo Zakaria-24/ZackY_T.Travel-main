@@ -11,6 +11,7 @@ import ProtectedRoute from "../Utilis/ProtectedRoute";
 import SpotViewDetails from "../Pages/SpotViewDetails";
 import Update from "../Pages/Update";
 import Delete from "../Pages/Delete";
+// import RootHome from "../Layout/RootHome";
 
 const router = createBrowserRouter([
   {
@@ -19,9 +20,25 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home />,
+        loader: () => fetch("https://southeast-asia-server.vercel.app/spot"),
       },
+      // {
+      //   path: "/",
+      //   element: <RootHome />,
+      //   errorElement: <NotFound />,
+
+      //   children: [
+      //     {
+      //       path: "/home",
+      //       element: <Home />,
+      //       loader: () =>
+      //         fetch("https://southeast-asia-server.vercel.app/spot"),
+      //     },
+      //   ],
+      // },
+
       {
         path: "/allTouristsSpot",
         element: <AllTouristsSpot />,

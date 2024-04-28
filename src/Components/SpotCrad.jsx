@@ -11,7 +11,7 @@ const SpotCrad = ({ spot }) => {
     visit,
     _id,
   } = spot;
-  console.log(_id);
+  // console.log(_id);
   return (
     <div>
       <div className="card bg-base-100 shadow-xl space-y-2">
@@ -22,12 +22,12 @@ const SpotCrad = ({ spot }) => {
           <h2 className="card-title">{spotName}!</h2>
           <p>{description.slice(0, 70)}...</p>
           <div className="card-actions justify-end mt-4">
-            <div className="badge badge-outline">{time}</div>
-            <div className="badge badge-outline">{cost}</div>
+            <div className="badge badge-outline">{time} days</div>
+            <div className="badge badge-outline">${cost}</div>
           </div>
           <div className="card-actions justify-end">
             <div className="badge badge-outline">{seasonality}</div>
-            <div className="badge badge-outline">{visit}</div>
+            <div className="badge badge-outline">{visit} visito per year</div>
           </div>
         </div>
         <Link to={`/viewDetails/${_id}`} className="btn btn-outline w-full">

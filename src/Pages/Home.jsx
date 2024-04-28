@@ -1,7 +1,13 @@
+import Carousel from "../Slider/Carousel";
+import HomeSpots from "./../Components/HomeSpots";
+
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <Carousel></Carousel>
+      <div className="container mx-auto my-10">
+        <HomeSpots></HomeSpots>
+      </div>
     </div>
   );
 };
