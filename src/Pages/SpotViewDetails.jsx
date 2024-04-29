@@ -37,7 +37,7 @@ const SpotViewDetails = () => {
           <div className="card-actions justify-end">
             <button
               onClick={() => navigate(-1 || "/")}
-              className="flex items-center justify-center w-1/2 px-5 py-1 text-lg transition-colors duration-200 bg-black text-white border rounded-lg gap-x-2 sm:w-auto   hover:bg-gray-100 "
+              className="flex items-center justify-center w-1/2 px-5 py-1 transition-colors duration-200 bg-slate-400 font-serif hover:bg-base-200 border rounded-lg gap-x-2 sm:w-auto "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const SpotViewDetails = () => {
                 />
               </svg>
 
-              <span className=" p-4">Back to Previous Page</span>
+              <span className=" p-2">Back to Previous Page</span>
             </button>
           </div>
         </div>

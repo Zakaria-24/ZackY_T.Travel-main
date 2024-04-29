@@ -1,9 +1,28 @@
 import { Link, NavLink } from "react-router-dom";
 import CustomContex from "../Utilis/CustomContex";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  // const [theme, ]
   const { user, logOut } = CustomContex();
+
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
+
   return (
     <div>
       <div className="navbar p-2 bg-slate-600 font-serif text-slate-300">
@@ -83,7 +102,11 @@ const Navbar = () => {
           {/* theme controllar */}
           <label className="swap swap-rotate mr-2">
             {/* this hidden checkbox controls the state */}
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onChange={handleToggle}
+              checked={theme === "light" ? false : true}
+            />
 
             {/* sun icon */}
             <svg
