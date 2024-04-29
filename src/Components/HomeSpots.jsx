@@ -5,13 +5,13 @@ import HomeCard from "../HomeCard/HomeCard";
 
 const HomeSpots = () => {
   const homeSpots = useLoaderData();
-  console.log(homeSpots);
+  // console.log(homeSpots);
   const [spots, setSpots] = useState(homeSpots);
   console.log(setSpots);
 
   return (
     <div>
-      <h1 className=" flex justify-center my-6 text-3xl font-bold">
+      <h1 className=" flex justify-center my-6 text-5xl font-bold text-slate-600 font-serif">
         Tourist Spots
       </h1>
       {/* <h1>Location: {spots?.location}</h1> */}

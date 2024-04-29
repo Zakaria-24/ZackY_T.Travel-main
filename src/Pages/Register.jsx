@@ -63,12 +63,14 @@ const Register = () => {
 
   return (
     <div>
-      <div className="hero bg-base-100 min-h-screen">
+      <div className="hero bg-slate-300 min-h-screen">
         <div className="hero-content flex-col ">
           <div className="text-center ">
-            <h1 className="text-5xl font-bold t">Register Now!</h1>
+            <h1 className="text-5xl font-bold text-slate-600 font-serif">
+              Register Now!
+            </h1>
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full max-w-sm shadow-2xl">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -140,14 +142,14 @@ const Register = () => {
                 {regError && <span className="text-red-400">{regError}</span>}
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-purple-600 hover:bg-base-200 ">
+                <button className="btn bg-slate-500 hover:bg-base-200 ">
                   Register
                 </button>
               </div>
             </form>
-            <p className="ml-4">
+            <p className="ml-6 mb-4 ">
               Already have an account{" "}
-              <span className="underline ">
+              <span className="underline text-slate-500 text-lg font-semibold font-serif">
                 <Link to="/login">please login</Link>
               </span>
             </p>

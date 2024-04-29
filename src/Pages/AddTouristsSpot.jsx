@@ -54,8 +54,10 @@ const AddTouristsSpot = () => {
       });
   };
   return (
-    <div className=" p-24">
-      <h2 className="text-3xl font-extrabold">Add Tourist Spot</h2>
+    <div className=" p-24 bg-slate-300">
+      <h2 className="text-5xl font-bold text-slate-600 font-serif">
+        Add Tourist Spot
+      </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* form name and quantity row */}
         <div className="md:flex mb-8">
@@ -242,7 +244,11 @@ const AddTouristsSpot = () => {
             </label>
           </div>
         </div>
-        <input type="submit" value="Add" className="btn btn-block" />
+        <input
+          type="submit"
+          value="Add"
+          className="btn bg-slate-500 w-full font-serif"
+        />
       </form>
     </div>
   );

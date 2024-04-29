@@ -6,7 +6,7 @@ const Carousel = () => {
           <div
             className="hero min-h-screen rounded-2xl"
             style={{
-              backgroundImage: "url(https://i.ibb.co/m8CMnXw/Cox-s.jpg)",
+              backgroundImage: "url(https://i.ibb.co/1qyrP8W/sundarban.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>

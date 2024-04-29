@@ -59,13 +59,15 @@ const LogIn = () => {
 
   return (
     <div>
-      <div className="hero bg-base-100 lg:h-[550px]">
+      <div className="hero bg-slate-300 lg:h-[550px]">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold ">Login Now!</h1>
-            <p className="py-6">
+            <h1 className="text-5xl font-bold text-slate-600 font-serif">
+              Login Now!
+            </h1>
+            <p className="py-6 font-semibold">
               Welcome to the{" "}
-              <span className="text-purple-400 text-2xl font-semibold">
+              <span className="text-teal-500 text-2xl font-semibold font-serif">
                 Zacky_T.Travel
               </span>
               . Explore our website and grab your favorite one.
@@ -110,7 +112,7 @@ const LogIn = () => {
               </div>
               {loginError && <span className="text-red-400">{loginError}</span>}
               <div className="form-control mt-6">
-                <button className="btn hover:bg-base100 bg-purple-600">
+                <button className="btn hover:bg-base100 bg-slate-500">
                   Login
                 </button>
               </div>
@@ -129,9 +131,12 @@ const LogIn = () => {
               />
             </div>
 
-            <p className="ml-4">
+            <p className="ml-6 mb-4">
               Do not have an account{" "}
-              <Link className="underline" to="/register">
+              <Link
+                className="underline text-slate-500 text-lg font-semibold font-serif"
+                to="/register"
+              >
                 please register
               </Link>
             </p>

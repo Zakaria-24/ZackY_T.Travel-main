@@ -8,15 +8,19 @@ const AllTouristsSpot = () => {
   const [spots, setSpots] = useState(allSpots);
   console.log(setSpots);
   return (
-    <div className=" my-10">
+    <div className=" py-16 bg-slate-300">
       <div className="container mx-auto">
         <div className="dropdown dropdown-bottom">
-          <div tabIndex={0} role="button" className="btn btn-outline m-1">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn bg-slate-500 px-6 m-1 text-teal-400 font-serif"
+          >
             Sort...
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 bg-slate-500"
           >
             <li>
               <a>Average_Cost</a>

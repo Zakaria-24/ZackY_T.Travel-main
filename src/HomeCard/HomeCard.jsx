@@ -2,13 +2,13 @@
 import { Link } from "react-router-dom";
 
 const HomeCard = ({ sp }) => {
-  const { location, photoUrl, spotName, description } = sp;
-  console.log(location);
+  const { _id, photoUrl, spotName, description } = sp;
+  //   console.log(location);
   return (
     <div>
       <div>
         {/* <h1>{time}</h1> */}
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 shadow-2xl">
           <figure className="px-10 pt-10">
             <img src={photoUrl} alt="Shoes" className="rounded-xl" />
           </figure>
@@ -17,9 +17,8 @@ const HomeCard = ({ sp }) => {
             <p>{description.slice(0, 30)}</p>
             <div className="card-actions">
               <Link
-                //   to="/viewDetails"
-                //   to={`/viewDetails/${_id}`}
-                className="btn btn-outline w-full"
+                to={`/viewDetails/${_id}`}
+                className="btn bg-slate-500 w-full"
               >
                 View Details
               </Link>

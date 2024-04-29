@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
+    <div className="bg-slate-700 text-white">
+      <footer className="footer p-10 ">
         <nav>
           <aside>
             <Link to="/">
@@ -13,7 +13,9 @@ const Footer = () => {
                 alt="image"
               />
             </Link>
-            <p className="text-3xl font-bold">Zacky_T.Travel</p>
+            <p className="text-teal-500 text-3xl font-semibold font-serif">
+              Zacky_T.Travel
+            </p>
           </aside>
         </nav>
         <nav>
@@ -62,11 +64,11 @@ const Footer = () => {
           </nav>
         </nav>
       </footer>
-      <footer className="footer footer-center px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+      <footer className="footer footer-center px-10 py-4 border-t border-base-300">
         <aside>
           <p>
             Copyright © 2024 - All right reserved by{" "}
-            <span className="text-lg font-medium text-purple-400">
+            <span className="text-lg font-serif text-teal-500">
               Zacky_T.Travel
             </span>
           </p>

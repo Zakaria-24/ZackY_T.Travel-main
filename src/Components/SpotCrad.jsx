@@ -14,7 +14,7 @@ const SpotCrad = ({ spot }) => {
   // console.log(_id);
   return (
     <div>
-      <div className="card bg-base-100 shadow-xl space-y-2">
+      <div className="card  shadow-2xl space-y-2">
         <figure>
           <img className=" h-60" src={photoUrl} alt="Sundarban_image" />
         </figure>
@@ -30,7 +30,7 @@ const SpotCrad = ({ spot }) => {
             <div className="badge badge-outline">{visit} visito per year</div>
           </div>
         </div>
-        <Link to={`/viewDetails/${_id}`} className="btn btn-outline w-full">
+        <Link to={`/viewDetails/${_id}`} className="btn bg-slate-500  w-full">
           View Details
         </Link>
       </div>
