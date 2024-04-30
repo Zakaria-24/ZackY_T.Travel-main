@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import CustomContex from "../Utilis/CustomContex";
 import { useEffect, useState } from "react";
 import { Tooltip } from "react-tooltip";
+// import { useTypewriter, Cursor } from "react-simple-typewriter";
 // import TextLottie from "../TextLottie.json";
 // import Lottie from "lottie-react";
 
@@ -25,6 +26,19 @@ const Navbar = () => {
     const localTheme = localStorage.getItem("theme");
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
+
+  // const { text1 } = useTypewriter({
+  //   words: ["Zack"],
+  //   loop: {},
+  // });
+  // const { text2 } = useTypewriter({
+  //   words: ["Y_T."],
+  //   loop: {},
+  // });
+  // const { text3 } = useTypewriter({
+  //   words: ["Travels"],
+  //   loop: {},
+  // });
 
   return (
     <div>
@@ -72,7 +86,16 @@ const Navbar = () => {
           </div>
           <div>
             {/* <Lottie animationData={TextLottie} /> */}
-            <h1 className=" text-2xl font-bold ">Zacky_T.Travels</h1>
+            <h1 className=" text-2xl font-bold ">Zacky_T.Travel</h1>
+            {/* <h1 className=" text-2xl font-bold ">
+              <span style={{ color: " red" }}>{text1}</span>
+
+              <span>{text2}</span>
+              <span style={{ color: " red" }}>{text3}</span>
+              <span style={{ color: "red" }}>
+                <Cursor cursorStyle="/" />
+              </span>
+            </h1> */}
           </div>
           {/* <div className="tooltip tooltip-right" data-tip="Zacky_T.Travels">
             <Link to="/">

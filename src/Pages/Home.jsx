@@ -36,13 +36,16 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-slate-300">
+    <div className="">
+      {/* carousel */}
       <Carousel></Carousel>
 
+      {/* home spot */}
       <div className="container mx-auto my-16">
         <HomeSpots></HomeSpots>
       </div>
 
+      {/* country spot */}
       <div className="container mx-auto py-10 pb-20">
         <h1 className=" flex justify-center my-6  text-5xl font-bold text-slate-600 font-serif">
           Countries Historical Place:{}
@@ -67,14 +70,14 @@ const Home = () => {
             <div className=" space-y-20">
               <div>
                 <h1 className="text-5xl font-bold text-teal-500 font-serif pb-8">
-                  HOLIDAY TYPE
+                  HOLIDAY ~ TYPE
                 </h1>
                 <p className="text-xl font-mono">
                   Get explore your dream and travel the world with{" "}
                   <span>Zacky_T.Travels</span>
                 </p>
               </div>
-              <div className="flex flex-col lg:flex-row gap-10 ">
+              <div className="flex pl-10 ml-10 lg:pl-0 flex-col lg:flex-row gap-10 ">
                 <img
                   className="rounded-full w-40 h-40"
                   src="https://i.ibb.co/1KcxNvW/summer-beach-logo-template-441059-36.jpg"
