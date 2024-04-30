@@ -1,6 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CustomContex from "../Utilis/CustomContex";
 import { useEffect, useState } from "react";
+// import TextLottie from "../TextLottie.json";
+// import Lottie from "lottie-react";
 
 const Navbar = () => {
   const { user, logOut } = CustomContex();
@@ -67,7 +69,11 @@ const Navbar = () => {
               )}
             </ul>
           </div>
-          <div className="tooltip tooltip-right" data-tip="Zacky_T.Travels">
+          <div>
+            {/* <Lottie animationData={TextLottie} /> */}
+            <h1 className=" text-2xl font-bold ">Zacky_T.Travels</h1>
+          </div>
+          {/* <div className="tooltip tooltip-right" data-tip="Zacky_T.Travels">
             <Link to="/">
               <img
                 className="w-28 h-8 rounded-md"
@@ -75,7 +81,7 @@ const Navbar = () => {
                 alt="image"
               />
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">

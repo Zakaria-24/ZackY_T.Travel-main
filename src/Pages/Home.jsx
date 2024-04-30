@@ -52,7 +52,61 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Extra section  */}
+      {/* extra section 1  */}
+      <div className=" mb-16">
+        <div
+          className="hero min-h-screen"
+          style={{
+            backgroundImage:
+              "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+          }}
+        >
+          <div className="hero-overlay bg-opacity-90"></div>
+
+          <div className="hero-content text-center text-neutral-content">
+            <div className=" space-y-20">
+              <div>
+                <h1 className="text-5xl font-bold text-teal-500 font-serif pb-8">
+                  HOLIDAY TYPE
+                </h1>
+                <p className="text-xl font-mono">
+                  Get explore your dream and travel the world with{" "}
+                  <span>Zacky_T.Travels</span>
+                </p>
+              </div>
+              <div className="flex flex-col lg:flex-row gap-10 ">
+                <img
+                  className="rounded-full w-40 h-40"
+                  src="https://i.ibb.co/1KcxNvW/summer-beach-logo-template-441059-36.jpg"
+                  alt=""
+                />
+                <img
+                  className="rounded-full  w-40 h-40"
+                  src="https://i.ibb.co/tcS5N1f/cruise1.jpg"
+                  alt=""
+                />
+                <img
+                  className="rounded-full  w-40 h-40"
+                  src="https://i.ibb.co/K2ryyc4/honeymoon-icon-trendy-honeymoon-logo-concept-white-backgroun-honeymoon-icon-trendy-honeymoon-logo-co.webp"
+                  alt=""
+                />
+                <img
+                  className="rounded-full w-40 h-40"
+                  src="https://i.ibb.co/4gSpWLt/adventure-logo-free-vector.jpg"
+                  alt=""
+                />
+                <img
+                  className="rounded-full w-40 h-40"
+                  src="https://i.ibb.co/S6bBY6T/citybreak-icons-05.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Extra section 2 */}
       <div className=" container mx-auto pb-16">
         <div className=" bg-teal-500 py-12">
           <div className="container mx-auto text-center">
@@ -64,7 +118,7 @@ const Home = () => {
               Access exclusive deals and discounts on accommodations, tours, and
               activities, saving you money on your travels.
             </p>
-            <p>
+            <p className=" mb-4">
               You will only receive a single email when a new product is added
               or when a new discount code is available.
             </p>
