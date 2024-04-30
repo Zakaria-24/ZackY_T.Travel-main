@@ -30,7 +30,7 @@ const Home = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          toast.success("Added successfully");
+          toast.success("Subscribe successfully");
         }
       });
   };
