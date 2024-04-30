@@ -67,7 +67,7 @@ const Navbar = () => {
               )}
             </ul>
           </div>
-          <div className="tooltip tooltip-right" data-tip="Zacky_T.Travel">
+          <div className="tooltip tooltip-right" data-tip="Zacky_T.Travels">
             <Link to="/">
               <img
                 className="w-28 h-8 rounded-md"

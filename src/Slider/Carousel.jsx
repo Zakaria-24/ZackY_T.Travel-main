@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Carousel = () => {
   return (
     <div>
@@ -11,14 +13,18 @@ const Carousel = () => {
           >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+              <div className="max-w-lg">
+                <h1 className="mb-5 text-5xl font-bold text-teal-400 font-serif">
+                  Streamlining Your Tourism Experience
+                </h1>
+                <p className="mb-5 text-lg  text-white font-normal opacity-100 font-serif">
+                  Zacky_T.Travel empowers you to explore the world with ease.
+                  Join us and embark on a journey where every moment is an
+                  adventure waiting to unfold.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <Link to="/register" className="btn bg-slate-500 font-serif">
+                  Let's Get Started
+                </Link>
               </div>
             </div>
           </div>
@@ -42,13 +48,17 @@ const Carousel = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                <h1 className="mb-5 text-5xl font-bold text-teal-400 font-serif">
+                  Streamlining Your Tourism Experience
+                </h1>
+                <p className="mb-5 text-lg  text-white font-normal opacity-100 font-serif">
+                  Zacky_T.Travel empowers you to explore the world with ease.
+                  Join us and embark on a journey where every moment is an
+                  adventure waiting to unfold.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <Link to="/register" className="btn bg-slate-500 font-serif">
+                  Let's Get Started
+                </Link>
               </div>
             </div>
           </div>
@@ -72,13 +82,17 @@ const Carousel = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                <h1 className="mb-5 text-5xl font-bold text-teal-400 font-serif">
+                  Streamlining Your Tourism Experience
+                </h1>
+                <p className="mb-5 text-lg  text-white font-normal opacity-100 font-serif">
+                  Zacky_T.Travel empowers you to explore the world with ease.
+                  Join us and embark on a journey where every moment is an
+                  adventure waiting to unfold.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <Link to="/register" className="btn bg-slate-500 font-serif">
+                  Let's Get Started
+                </Link>
               </div>
             </div>
           </div>
@@ -103,13 +117,17 @@ const Carousel = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                <h1 className="mb-5 text-5xl font-bold text-teal-400 font-serif">
+                  Streamlining Your Tourism Experience
+                </h1>
+                <p className="mb-5 text-lg  text-white font-normal opacity-100 font-serif">
+                  Zacky_T.Travel empowers you to explore the world with ease.
+                  Join us and embark on a journey where every moment is an
+                  adventure waiting to unfold.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <Link to="/register" className="btn bg-slate-500 font-serif">
+                  Let's Get Started
+                </Link>
               </div>
             </div>
           </div>

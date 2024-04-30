@@ -6,7 +6,20 @@ const AllTouristsSpot = () => {
   const allSpots = useLoaderData();
   // console.log(allSpots);
   const [spots, setSpots] = useState(allSpots);
-  console.log(setSpots);
+  // console.log(spots);
+
+  const handleSort = () => {
+    console.log(spots);
+    const Result = spots.sort((a, b) => a.cost.localeCompare(b.cost));
+    setSpots(Result);
+  };
+  // };
+  // const handleSort = () => {
+  //   // console.log(spots);
+  //   const Result = spots.sort((a, b) => a.cost.localeCompare(b.cost));
+  //   setSpots(Result);
+  // };
+
   return (
     <div className=" py-16 bg-slate-300">
       <div className="container mx-auto">
@@ -23,7 +36,7 @@ const AllTouristsSpot = () => {
             className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 bg-slate-500"
           >
             <li>
-              <a>Average_Cost</a>
+              <button onClick={handleSort}>Average_Cost</button>
             </li>
           </ul>
         </div>

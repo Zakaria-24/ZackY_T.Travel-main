@@ -68,7 +68,7 @@ const LogIn = () => {
             <p className="py-6 font-semibold">
               Welcome to the{" "}
               <span className="text-teal-500 text-2xl font-semibold font-serif">
-                Zacky_T.Travel
+                Zacky_T.Travels
               </span>
               . Explore our website and grab your favorite one.
             </p>

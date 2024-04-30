@@ -14,7 +14,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-teal-500 text-3xl font-semibold font-serif">
-              Zacky_T.Travel
+              Zacky_T.Travels
             </p>
           </aside>
         </nav>
@@ -69,7 +69,7 @@ const Footer = () => {
           <p>
             Copyright © 2024 - All right reserved by{" "}
             <span className="text-lg font-serif text-teal-500">
-              Zacky_T.Travel
+              Zacky_T.Travels
             </span>
           </p>
         </aside>
