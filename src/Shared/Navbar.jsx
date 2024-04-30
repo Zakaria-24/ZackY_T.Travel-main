@@ -1,10 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import CustomContex from "../Utilis/CustomContex";
 import { useEffect, useState } from "react";
 import { Tooltip } from "react-tooltip";
-// import { useTypewriter, Cursor } from "react-simple-typewriter";
-// import TextLottie from "../TextLottie.json";
-// import Lottie from "lottie-react";
 
 const Navbar = () => {
   const { user, logOut } = CustomContex();
@@ -26,19 +23,6 @@ const Navbar = () => {
     const localTheme = localStorage.getItem("theme");
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
-
-  // const { text1 } = useTypewriter({
-  //   words: ["Zack"],
-  //   loop: {},
-  // });
-  // const { text2 } = useTypewriter({
-  //   words: ["Y_T."],
-  //   loop: {},
-  // });
-  // const { text3 } = useTypewriter({
-  //   words: ["Travels"],
-  //   loop: {},
-  // });
 
   return (
     <div>
@@ -65,19 +49,19 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li className=" bg-teal-600 rounded-2xl font-serif text-slate-500 ">
+              <li className="  rounded-2xl font-serif text-slate-500 ">
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li className=" bg-teal-600 rounded-2xl">
+              <li className="  rounded-2xl">
                 <NavLink to="/allTouristsSpot">All Tourists Spot</NavLink>
               </li>
 
               {user && (
                 <>
-                  <li className=" bg-teal-600 rounded-2xl ">
+                  <li className="  rounded-2xl ">
                     <NavLink to="/addTouristsSpot">Add Tourists Spot</NavLink>
                   </li>
-                  <li className=" bg-teal-600 rounded-2xl ">
+                  <li className="  rounded-2xl ">
                     <NavLink to="/myList">My List</NavLink>
                   </li>
                 </>
@@ -86,16 +70,9 @@ const Navbar = () => {
           </div>
           <div>
             {/* <Lottie animationData={TextLottie} /> */}
-            <h1 className=" text-2xl font-bold ">Zacky_T.Travel</h1>
-            {/* <h1 className=" text-2xl font-bold ">
-              <span style={{ color: " red" }}>{text1}</span>
-
-              <span>{text2}</span>
-              <span style={{ color: " red" }}>{text3}</span>
-              <span style={{ color: "red" }}>
-                <Cursor cursorStyle="/" />
-              </span>
-            </h1> */}
+            <h1 className=" text-2xl font-bold text-teal-500  font-serif">
+              Zacky_T.Travel
+            </h1>
           </div>
           {/* <div className="tooltip tooltip-right" data-tip="Zacky_T.Travels">
             <Link to="/">
@@ -109,19 +86,19 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">
-            <li className=" bg-teal-600 rounded-2xl mr-2 ">
+            <li className="  rounded-2xl mr-2 ">
               <NavLink to="/">Home</NavLink>
             </li>
-            <li className=" bg-teal-600 rounded-2xl mr-2">
+            <li className="  rounded-2xl mr-2">
               <NavLink to="/allTouristsSpot">All Tourists Spot</NavLink>
             </li>
 
             {user && (
               <>
-                <li className=" bg-teal-600 rounded-2xl mr-2 ">
+                <li className="  rounded-2xl mr-2 ">
                   <NavLink to="/addTouristsSpot">Add Tourists Spot</NavLink>
                 </li>
-                <li className=" bg-teal-600 rounded-2xl ">
+                <li className="  rounded-2xl ">
                   <NavLink to="/myList">My List</NavLink>
                 </li>
               </>
