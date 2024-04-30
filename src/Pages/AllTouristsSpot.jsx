@@ -6,19 +6,30 @@ const AllTouristsSpot = () => {
   const allSpots = useLoaderData();
   // console.log(allSpots);
   const [spots, setSpots] = useState(allSpots);
-  // console.log(spots);
+  console.log(spots);
 
-  const handleSort = () => {
-    console.log(spots);
-    const Result = spots.sort((a, b) => a.cost.localeCompare(b.cost));
-    setSpots(Result);
+  // const [ costData, setCostData] = useState(allSpots)
+
+  const handleSortAse = (e) => {
+    if (e.target) {
+      // console.log("hello");
+      const sorting = [...spots].sort((a, b) => a.cost - b.cost);
+      setSpots(sorting);
+    }
+    // console.log("hello");
+    // const Result = spots.sort((a, b) => a.cost.localeCompare(b.cost));
+    // setSpots(Result);
   };
-  // };
-  // const handleSort = () => {
-  //   // console.log(spots);
-  //   const Result = spots.sort((a, b) => a.cost.localeCompare(b.cost));
-  //   setSpots(Result);
-  // };
+  const handleSortDes = (e) => {
+    if (e.target) {
+      // console.log("hello");
+      const sorting = [...spots].sort((a, b) => b.cost - a.cost);
+      setSpots(sorting);
+    }
+    // console.log("hello");
+    // const Result = spots.sort((a, b) => a.cost.localeCompare(b.cost));
+    // setSpots(Result);
+  };
 
   return (
     <div className=" py-16 bg-slate-300">
@@ -27,16 +38,20 @@ const AllTouristsSpot = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn bg-slate-500 px-6 m-1 text-teal-400 font-serif"
+            className="btn bg-slate-500 px-6 m-1  font-serif"
           >
-            Sort...
+            Sort by: <span className="text-teal-400">Avarage_Cost</span>
           </div>
           <ul
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 bg-slate-500"
           >
             <li>
-              <button onClick={handleSort}>Average_Cost</button>
+              <button onClick={handleSortAse}>Ascending</button>
+            </li>
+            <hr />
+            <li>
+              <button onClick={handleSortDes}>Descending</button>
             </li>
           </ul>
         </div>

@@ -3,23 +3,23 @@
 import { Link } from "react-router-dom";
 
 const CountryCard = ({ countries }) => {
-  const { _id } = countries;
+  const { country } = countries;
+  console.log(country);
 
   return (
     <>
-      {countries.map((c) => (
+      {countries.map((data) => (
         <Link
-          to="/allTouristSpot"
-          // to={`/viewDetails/${_id}`}
-          key={c._id}
+          to={`/country/${data.country}`}
+          key={data._id}
           className="card  shadow-2xl image-full  transition border-2 hover:scale-105 "
         >
           <figure>
-            <img src={c.image} alt="Shoes" />
+            <img src={data.image} alt="Shoes" />
           </figure>
           <div className="card-body text-center items-center">
-            <h2 className="card-title text-5xl">{c.country}</h2>
-            <p>{c.description}</p>
+            <h2 className="card-title text-5xl">{data.country}</h2>
+            <p>{data.description}</p>
           </div>
         </Link>
       ))}

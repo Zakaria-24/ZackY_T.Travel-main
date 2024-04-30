@@ -10,6 +10,7 @@ import Root from "../Layout/Root";
 import ProtectedRoute from "../Utilis/ProtectedRoute";
 import SpotViewDetails from "../Pages/SpotViewDetails";
 import Update from "../Pages/Update";
+import MyCountry from "../Pages/MyCountry";
 // import RootHome from "../Layout/RootHome";
 
 const router = createBrowserRouter([
@@ -46,12 +47,20 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "login",
+        path: "/login",
         element: <LogIn />,
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/country/:country",
+        element: <MyCountry />,
+        loader: ({ params }) =>
+          fetch(
+            `https://southeast-asia-server.vercel.app/countries/${params.country}`
+          ),
       },
       {
         path: "/update/:id",
