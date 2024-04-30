@@ -8,17 +8,12 @@ const AllTouristsSpot = () => {
   const [spots, setSpots] = useState(allSpots);
   console.log(spots);
 
-  // const [ costData, setCostData] = useState(allSpots)
-
   const handleSortAse = (e) => {
     if (e.target) {
       // console.log("hello");
       const sorting = [...spots].sort((a, b) => a.cost - b.cost);
       setSpots(sorting);
     }
-    // console.log("hello");
-    // const Result = spots.sort((a, b) => a.cost.localeCompare(b.cost));
-    // setSpots(Result);
   };
   const handleSortDes = (e) => {
     if (e.target) {
@@ -26,9 +21,6 @@ const AllTouristsSpot = () => {
       const sorting = [...spots].sort((a, b) => b.cost - a.cost);
       setSpots(sorting);
     }
-    // console.log("hello");
-    // const Result = spots.sort((a, b) => a.cost.localeCompare(b.cost));
-    // setSpots(Result);
   };
 
   return (

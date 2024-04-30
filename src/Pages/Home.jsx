@@ -18,7 +18,6 @@ const Home = () => {
     const newNewsletter = {
       email,
     };
-
     // send data to the server
     fetch("https://southeast-asia-server.vercel.app/newsletter", {
       method: "POST",
