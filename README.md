@@ -30,9 +30,7 @@ Zacky_T.Travels is a comprehensive platform designed to streamline your travel e
 
 - Southeast Asia.
 
-## Challenge:
+## Challenge: Package Name
 
-- Package Name
-
-* React-tooltip
-* React-simple-typewriter
+- React-tooltip
+- React-simple-typewriter
