@@ -4,6 +4,15 @@
 
 ## Important Link: [ZackY_T.Travel-server](https://github.com/Zakaria-24/ZackY_T.Travel-server)
 
+## Project Setup:
+   - First of all install all the dependencies in package.json file.
+   - Create a .env.local file in the root of the project
+     * in this file you have to create firebase auth variable
+     * create a VITE_API_URL= "your localhost port link"
+   - and In the server site :
+      * build a connection on mongodb and set your unique DB_USER and DB_PASS code,
+      * create  ACCESS_TOKEN_SECRET= "to get token"
+
 ## About
 
 Zacky_T.Travels is a comprehensive platform designed to streamline your travel experience. Whether you're a seasoned traveler or a tourism professional, our website offers a wide range of features and services to enhance every aspect of your journey.
