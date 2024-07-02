@@ -1,8 +1,8 @@
 # Zacky_T.Travels
 
-# Live site URL: https://southeast-asia-ec5f1.web.app/
+## Live site URL: https://southeast-asia-ec5f1.web.app/
 
-### Important Link: [ZackY_T.Travel-server](https://github.com/Zakaria-24/ZackY_T.Travel-server)
+## Important Link: [ZackY_T.Travel-server](https://github.com/Zakaria-24/ZackY_T.Travel-server)
 
 ## About
 
